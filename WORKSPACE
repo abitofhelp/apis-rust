@@ -50,7 +50,7 @@ crates_repository(
         "//:Cargo.toml",
         "//:crates/client/Cargo.toml",
         # "//:crates/proto/Cargo.toml",
-        #"//:crates/server/Cargo.toml",
+        "//:crates/server/Cargo.toml",
     ],
 )
 

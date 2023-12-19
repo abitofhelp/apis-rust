@@ -25,5 +25,4 @@ alias(
 
 rust_binary(
     name = "greeter_client",
-    embed = [":client_lib"],
 )
