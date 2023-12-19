@@ -1,0 +1,29 @@
+load("@crate_index//:defs.bzl", "aliases", "all_crate_deps")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_library")
+
+package(default_visibility = ["//visibility:public"])
+
+rust_library(
+    name = "client_lib",
+    srcs = glob([
+        "src/main.rs",
+    ]),
+    aliases = aliases(),
+    deps = all_crate_deps() + [
+        #"//proto/hello_world:hello_world_go_proto",
+#        ":build",
+    ],
+    proc_macro_deps = all_crate_deps(
+        proc_macro = True,
+    ),
+)
+
+alias(
+    name = "go_default_library",
+    actual = ":client_lib",
+)
+
+rust_binary(
+    name = "greeter_client",
+    embed = [":client_lib"],
+)

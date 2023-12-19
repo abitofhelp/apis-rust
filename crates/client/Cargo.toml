@@ -1,0 +1,22 @@
+[package]
+authors.workspace = true
+description.workspace = true
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license-file.workspace = true
+name = "greeter_client"
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version = "1.0.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+bench = false
+name = "greeter_client"
+path = "src/main.rs"
+
+[dependencies]
+#mycalculator = { path = "../mycalculator", version = "0.2.0" }
