@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package hello_world;
-option go_package = "github.com/abitofhelp/apis/proto/hello_world";
+option go_package = "github.com/abitofhelp/apis-rust/proto/hello_world";
 
 import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
