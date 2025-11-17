@@ -14,8 +14,19 @@ Cargo.lock linguist-generated
 *.toml linguist-vendored=false
 Cargo.toml linguist-vendored=false
 
-# Documentation
-*.md linguist-documentation
+# Exclude documentation from language stats
+*.md linguist-documentation linguist-detectable=false
+
+# Exclude proto files and generated code
+*.proto linguist-generated
+*.pb.go linguist-generated
+*.pb.rs linguist-generated
+
+# Exclude scripts and build files
+*.sh linguist-vendored
+Makefile linguist-vendored
+*.mk linguist-vendored
+*.json linguist-vendored
 
 # Exclude vendored dependencies
 **/vendor/** linguist-vendored
