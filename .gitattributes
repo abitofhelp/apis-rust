@@ -1,0 +1,27 @@
+# GitHub Linguist configuration - Rust project only
+
+# Mark Bazel files as vendored/generated
+*.bazel linguist-vendored
+*.bzl linguist-vendored
+*.lock linguist-vendored
+MODULE.bazel linguist-vendored
+MODULE.bazel.lock linguist-vendored
+WORKSPACE linguist-vendored
+WORKSPACE.bazel linguist-vendored
+
+# Mark build/config files as vendored
+Cargo.lock linguist-generated
+*.toml linguist-vendored=false
+Cargo.toml linguist-vendored=false
+
+# Documentation
+*.md linguist-documentation
+
+# Exclude vendored dependencies
+**/vendor/** linguist-vendored
+**/third_party/** linguist-vendored
+**/external/** linguist-vendored
+
+# Ensure Rust is detected
+*.rs linguist-detectable=true
+*.rs linguist-language=Rust
